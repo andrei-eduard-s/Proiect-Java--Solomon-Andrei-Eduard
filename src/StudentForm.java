@@ -86,7 +86,7 @@ public class StudentForm {
                     String getPrenumeStudent = getPrenume.getText();
                     try
                     {
-                        textArea4.setText(Cursuri.MediaStudentuluiAnuala(getNumeStudent, getPrenumeStudent));
+                       // textArea4.setText(Cursuri.AfisareRestante(getNumeStudent, getPrenumeStudent));
                     }catch(Exception ex){
                         JOptionPane.showMessageDialog(null, ex.getMessage());
                     }

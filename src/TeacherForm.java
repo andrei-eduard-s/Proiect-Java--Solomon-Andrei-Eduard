@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 
 public class TeacherForm {
     public TeacherForm(ManagerCursuri Cursuri) {
+        this.Cursuri = Cursuri;
         this.mainPanel = mainPanel;
         notareButton.addActionListener(new ActionListener() {
             @Override
@@ -22,7 +23,20 @@ public class TeacherForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource()==afisareCursuriPredateButton) {
-
+                textArea2.setText("Afisare Cursuri");
+                    /*
+                    String getNumeProfesor = getNume.getText();
+                    String getPrenumeProfesor = getPrenume.getText();
+                    for(Curs c : Cursuri.cursuri)
+                    {
+                        for(Profesor p : c.profu)
+                        {
+                            if(p.nume.compareTo(getNumeProfesor)==0 && s.prenume.compareTo(getPrenumeProfesor)==0)
+                            {
+                                textArea2.setText(c.nume.toString());
+                            }
+                        }
+                    }*/
                 }
             }
         });
@@ -30,7 +44,7 @@ public class TeacherForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource()==afisareStudentiButton) {
-
+                    textArea3.setText("Afisare Studenti");
                 }
             }
         });
@@ -52,4 +66,5 @@ public class TeacherForm {
     private JTextArea textArea2;
     private JTextArea textArea3;
     private JButton afisareStudentiButton;
+    private ManagerCursuri Cursuri;
 }
